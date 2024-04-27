@@ -1,0 +1,42 @@
+.feature-area {
+  background-color: #f2f2f2;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../../assets/img/features.jpg);
+    width: 50%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: #333;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    opacity: 0.75;
+    z-index: 2;
+  }
+  .feature {
+    display: grid;
+    grid-template-columns: 45% 50%;
+    .features-box {
+      display: grid;
+      grid-template-columns: repeat(2, 48%);
+      grid-gap: 30px;
+      .single-features {
+        margin-bottom: 30px;
+        h4 {
+          text-transform: capitalize;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
